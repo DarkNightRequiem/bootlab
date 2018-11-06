@@ -1,18 +1,17 @@
 package name.dnr.bootlab.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 public class HelloController {
 
-    @GetMapping("/hello")
-    public String hello(@RequestParam(name = "name",required = false,defaultValue = "Spring Boot")String name,Model model){
-        model.addAttribute("name",name);
+    // 这种写法必须在pom.xml中加入依赖spring-boot-starter-thymeleaf
+    // 否则会出现url和视图重名的错误
+    @RequestMapping("/hello")
+    public String hello(ModelMap map){
+        map.addAttribute("name","Spring Boot");
         return "hello";
     }
 }

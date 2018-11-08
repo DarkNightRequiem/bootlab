@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="common-head(title)">
+    <meta charset="UTF-8">
+    <script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <title th:text="${title}"></title>
+</head>
+<body>
+<!--
+th:insert ：保留自己的主标签，保留th:fragment的主标签。
+
+th:replace ：不要自己的主标签，保留th:fragment的主标签。
+
+th:include ：保留自己的主标签，不要th:fragment的主标签。（官方3.0后不推荐）
+
+th:fragment="fragment的名字(参数1,参数2...)"
+-->
+</body>
+</html>

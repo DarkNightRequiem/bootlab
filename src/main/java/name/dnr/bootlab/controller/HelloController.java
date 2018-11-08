@@ -9,7 +9,7 @@ public class HelloController {
 
     // 这种写法必须在pom.xml中加入依赖spring-boot-starter-thymeleaf
     // 否则会出现url和视图重名的错误
-    @RequestMapping("/hello")
+    @RequestMapping("/")
     public String hello(ModelMap map){
         map.addAttribute("name","Spring Boot");
         return "hello";

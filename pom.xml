@@ -49,6 +49,8 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+            <!--runtime表示此依赖是运行和测试时所需的，而不是编译和执行所需的-->
             <scope>runtime</scope>
         </dependency>
 

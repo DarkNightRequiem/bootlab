@@ -12,6 +12,6 @@ public class HelloController {
     @RequestMapping("/")
     public String hello(ModelMap map){
         map.addAttribute("name","Spring Boot");
-        return "hello";
+        return "hello2";
     }
 }

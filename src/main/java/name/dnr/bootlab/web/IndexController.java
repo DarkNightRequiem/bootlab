@@ -1,4 +1,4 @@
-package name.dnr.bootlab.controller;
+package name.dnr.bootlab.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

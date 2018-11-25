@@ -14,4 +14,9 @@ public class IndexController {
         map.addAttribute("name","Spring Boot");
         return "index";
     }
+
+    @RequestMapping("/sblearn")
+    public String sbLearn(){
+        return "sblearn";
+    }
 }

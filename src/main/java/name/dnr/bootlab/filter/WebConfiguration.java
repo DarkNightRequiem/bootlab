@@ -15,6 +15,7 @@ public class WebConfiguration {
         registrationBean.setFilter(new MyFilter());
         registrationBean.addUrlPatterns("/*");
         registrationBean.setName("MyFilter");
+        // order 的值越小优先级越高
         registrationBean.setOrder(6);
         return registrationBean;
     }

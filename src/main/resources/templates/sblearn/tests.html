@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <meta charset="UTF-8">
+    <title>springbootlearn</title>
+
+    <script>
+        function returnBtnOnClick() {
+            window.location.href="/"
+        }
+
+        // 左侧菜单点击事件
+        $('#sblearn-menu').on('click',"li",function () {
+            // 获取data-id的值
+            var sid=$(this).data("id");
+            // 设置锚点
+            window.location.hash=sid;
+            loadRight(sid);
+        });
+        function loadRight(sid) {
+            // var sid=window.location.hash;
+            var path,i;
+            switch (sid){
+                case "#li-test-for":path="sblearn/testUserLists.html";i=0;break;
+                case "#li-option-1":path="sblearn/option1.html";i=1;break;
+            }
+
+            // 加载对应的内容 高亮当前的列表项
+            $("#changeable_content").load(path);
+            $("#sblearn-menu li").eq(i).addClass("active").siblings().removeClass("active");
+        }
+    </script>
+</head>
+<style>
+    html,body{
+        height: 100%;
+        width: 100%;
+    }
+</style>
+<body>
+
+<div class="container" style="padding: 0;height: 100%;width: 100%">
+    <div class="col-lg-2 col-md-2" style="background: #f6f6f6;height: 100%">
+        <p>垂直的胶囊式导航菜单</p>
+        <!--导入左侧菜单-->
+        <div th:replace="sblearn/menu::left-menu"></div>
+        <button id="return-button" class="btn-default" onclick="returnBtnOnClick()">返回首页</button>
+    </div>
+    <div class="col-lg-10 col-md-10" style="background: #69adff;height: 100%">
+        <div id="changeable_content" class="changeable_content" th:fragment="changeable_content">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

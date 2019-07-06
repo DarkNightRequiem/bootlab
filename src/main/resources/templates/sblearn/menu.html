@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <meta charset="UTF-8">
+</head>
+<body>
+<!--左侧菜单导航栏-->
+<ul id="sblearn-menu" th:fragment="left-menu" class="nav nav-pills nav-stacked">
+    <li id="li-test-for"><a href="/testUserLists">for循环和列表</a></li>
+    <li id="li-option-1"><a href="#">选项1</a></li>
+    <li id="li-option-2"><a href="#">选项2</a></li>
+    <li><a href="#">Java</a></li>
+    <li class="active"><a href="#">PHP</a></li>
+</ul>
+</body>
+</html>

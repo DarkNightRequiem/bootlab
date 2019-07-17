@@ -12,26 +12,34 @@
             window.location.href="/"
         }
 
-        // 左侧菜单点击事件
-        $('#sblearn-menu').on('click',"li",function () {
-            // 获取data-id的值
-            var sid=$(this).data("id");
-            // 设置锚点
-            window.location.hash=sid;
-            loadRight(sid);
-        });
-        function loadRight(sid) {
-            // var sid=window.location.hash;
-            var path,i;
-            switch (sid){
-                case "#li-test-for":path="sblearn/testUserLists.html";i=0;break;
-                case "#li-option-1":path="sblearn/option1.html";i=1;break;
-            }
+        $(document).ready(function () {
+            // 左侧菜单点击事件
+            $('#sblearn-menu').on(type='click',selector="li",fn=function () {
+                // 获取data-id的值
+                var sid="#"+$(this).attr("id");
+                // 设置锚点
+                window.location.hash=sid;
+                loadRight(sid);
+            });
 
-            // 加载对应的内容 高亮当前的列表项
-            $("#changeable_content").load(path);
-            $("#sblearn-menu li").eq(i).addClass("active").siblings().removeClass("active");
-        }
+            function loadRight(sid) {
+                var path,i;
+                switch (sid){
+                    case "#li-test-for":path="sblearn/testUserLists.html";i=0;break;
+                    case "#li-option-1":path="sblearn/option1.html";i=1;break;
+                }
+
+                // 加载对应的内容 高亮当前的列表项
+                $("#changeable_content").html(path);
+                $("#sblearn-menu li").eq(i).addClass("active").siblings().removeClass("active");
+            }
+            
+            function loadPage(path) {
+                $.get(path,function (data,status) {
+                   $("#changeable_content").html(path)
+                })
+            }
+        });
     </script>
 </head>
 <style>

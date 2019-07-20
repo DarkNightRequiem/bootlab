@@ -1,39 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <!--bootstrap和jQuey支持严格按照顺序-->
     <script src="webjars/jquery/3.1.1/jquery.min.js"></script>
     <script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <!--自定义js-->
+    <script th:src="@{/js/sblearn.js}"></script>
+
     <meta charset="UTF-8">
     <title>springbootlearn</title>
 
     <script>
-        function returnBtnOnClick() {
-            window.location.href="/"
-        }
-
-        $(document).ready(function () {
-            // 左侧菜单点击事件
-            $('#sblearn-menu').on(type='click',selector="li",fn=function () {
-                // 获取data-id的值
-                var sid="#"+$(this).attr("id");
-                // 设置锚点
-                window.location.hash=sid;
-                loadRight(sid);
-            });
-
-            function loadRight(sid) {
-                var path,i;
-                switch (sid){
-                    case "#li-test-for":path="sblearn/testUserLists";i=0;break;
-                    case "#li-option-1":path="sblearn/option1";i=1;break;
-                }
-
-                // 加载对应的内容 高亮当前的列表项
-                $("#changeable_content").load(path);
-                $("#sblearn-menu li").eq(i).addClass("active").siblings().removeClass("active");
-            }
-        });
     </script>
 </head>
 <style>

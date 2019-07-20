@@ -25,19 +25,13 @@
             function loadRight(sid) {
                 var path,i;
                 switch (sid){
-                    case "#li-test-for":path="sblearn/testUserLists.html";i=0;break;
-                    case "#li-option-1":path="sblearn/option1.html";i=1;break;
+                    case "#li-test-for":path="sblearn/testUserLists";i=0;break;
+                    case "#li-option-1":path="sblearn/option1";i=1;break;
                 }
 
                 // 加载对应的内容 高亮当前的列表项
-                $("#changeable_content").html(path);
+                $("#changeable_content").load(path);
                 $("#sblearn-menu li").eq(i).addClass("active").siblings().removeClass("active");
-            }
-            
-            function loadPage(path) {
-                $.get(path,function (data,status) {
-                   $("#changeable_content").html(path)
-                })
             }
         });
     </script>
@@ -57,7 +51,7 @@
         <div th:replace="sblearn/menu::left-menu"></div>
         <button id="return-button" class="btn-default" onclick="returnBtnOnClick()">返回首页</button>
     </div>
-    <div class="col-lg-10 col-md-10" style="background: #69adff;height: 100%">
+    <div class="col-lg-10 col-md-10 container" style="background: #69adff;height: 100%">
         <div id="changeable_content" class="changeable_content" th:fragment="changeable_content">
 
         </div>

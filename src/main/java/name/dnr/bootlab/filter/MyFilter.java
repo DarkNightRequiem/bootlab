@@ -3,6 +3,9 @@ package name.dnr.bootlab.filter;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * 自定义Filter有两种实现方式：
@@ -21,8 +24,11 @@ public class MyFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         // 获取Http请求
         HttpServletRequest request=(HttpServletRequest)servletRequest;
+
         // 输出过滤信息
-        System.out.println("【MyFilter】"+
+        System.out.println(
+                new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date())+
+                "   "+"【MyFilter】"+
                 "url:  "+request.getRequestURI()+
                 "method:"+request.getMethod());
         // 过滤链继续处理

@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
-public class WebConfiguration {
+public class BootlabFilterConfiguration {
 
     // 将自定义过滤器加入过滤链
     @Bean

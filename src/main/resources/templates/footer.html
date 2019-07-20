@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
 </head>
 <body>
+<!--
+th:insert ：保留自己的主标签，保留th:fragment的主标签。
+
+th:replace ：不要自己的主标签，保留th:fragment的主标签。
+
+th:include ：保留自己的主标签，不要th:fragment的主标签。（官方3.0后不推荐）
+
+th:fragment="fragment的名字(参数1,参数2...)"
+-->
 <footer th:fragment="author-footer" style="text-align: center;padding: 0;margin: 0"> &copy; Created by DarkNightRequiem 2018</footer>
 </body>
 </html>

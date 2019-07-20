@@ -19,8 +19,13 @@ public class MyFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+        // 获取Http请求
         HttpServletRequest request=(HttpServletRequest)servletRequest;
-        System.out.println("this is MyFilter,url :"+ request.getRequestURI());
+        // 输出过滤信息
+        System.out.println("【MyFilter】"+
+                "url:  "+request.getRequestURI()+
+                "method:"+request.getMethod());
+        // 过滤链继续处理
         filterChain.doFilter(servletRequest,servletResponse);
     }
 

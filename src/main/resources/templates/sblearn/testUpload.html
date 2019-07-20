@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试文件上传</title>
+</head>
+<body>
+<div class="container" style="padding: 0;margin: 0;background: #ffffff">
+    <div>
+        <!--测试文件上传表单-->
+        <form method="post" action="/sblearn/upload" enctype="multipart/form-data">
+            <input type="file" name="file"/>
+            <br/><br/>
+            <input type="submit" value="提交(submit)">
+        </form>
+    </div>
+
+    <div class="panel panel-default">
+        <div id="test-single-file-upload-info" class="panel-body">
+            请选择一个您要上传的文件
+        </div>
+    </div>
+</div>
+</body>
+</html>

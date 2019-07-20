@@ -18,7 +18,7 @@ $(document).ready(function () {
         var path,i;
         switch (sid){
             case "#li-test-for":path="sblearn/testUserLists";i=0;break;
-            case "#li-file-upload":path="sblearn/option1";i=1;break;
+            case "#li-file-upload":path="sblearn/testUpload";i=1;break;
         }
 
         // 加载对应的内容 高亮当前的列表项

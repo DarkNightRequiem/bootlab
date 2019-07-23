@@ -8,10 +8,10 @@
 <div class="container" style="padding: 0;margin: 0;background: #ffffff">
     <div>
         <!--测试文件上传表单-->
-        <form method="post" action="/sblearn/upload" enctype="multipart/form-data">
+        <form id="test-single-file-upload-form"  enctype="multipart/form-data">
             <input type="file" name="file"/>
             <br/><br/>
-            <input type="submit" value="提交(submit)">
+            <input type="button" onclick="commitSingleFile()" value="提交(submit)">
         </form>
     </div>
 

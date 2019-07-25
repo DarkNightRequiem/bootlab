@@ -57,6 +57,7 @@ public class SblearnController {
     /***数据响应相关***/
     /*@RequestMapping(value = "/upload",method = RequestMethod.POST)*/
     @PostMapping("/upload")
+    @ResponseBody
     public String testSingleFileUplaod(MultipartFile file){
         if(file.isEmpty()){
             return "File is Empty!";

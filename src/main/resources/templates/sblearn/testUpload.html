@@ -6,20 +6,43 @@
 </head>
 <body>
 <div class="container" style="padding: 0;margin: 0;background: #ffffff">
-    <div>
-        <!--测试文件上传表单-->
-        <form id="test-single-file-upload-form"  enctype="multipart/form-data">
-            <input type="file" name="file"/>
-            <br/><br/>
-            <input type="button" onclick="commitSingleFile()" value="提交(submit)">
-        </form>
-    </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">测试单个文件上传表单</div>
+        <div>
+            <form id="test-single-file-upload-form"  enctype="multipart/form-data">
+                <input type="file" name="file"/>
+                <br/><br/>
+                <input type="button" onclick="commitSingleFile()" value="提交(submit)">
+            </form>
+        </div>
 
-    <div class="panel panel-default">
-        <div id="test-single-file-upload-info" class="panel-body">
-            请选择一个您要上传的文件
+        <div class="panel panel-default">
+            <div id="test-single-file-upload-info" class="panel-body">
+                请选择一个您要上传的文件
+            </div>
         </div>
     </div>
+
+
+    <div class="panel panel-danger">
+        <div class="panel-heading">测试单个文件上传表单</div>
+        <div>
+            <!--测试单个文件上传表单-->
+            <form id="test-multi-files-upload-form"  enctype="multipart/form-data">
+                <input type="file" name="file1"/><br/><br/>
+                <input type="file" name="file2"/><br/><br/>
+                <input type="file" name="file3"/><br/><br/>
+                <input type="button" onclick="" value="提交(submit)">
+            </form>
+        </div>
+
+        <div class="panel panel-default">
+            <div id="test-multi-files-upload-info" class="panel-body">
+                请选择三个您要上传的文件
+            </div>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>

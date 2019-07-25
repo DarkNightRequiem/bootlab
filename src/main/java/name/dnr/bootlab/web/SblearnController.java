@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -55,10 +56,12 @@ public class SblearnController {
 
 
     /***数据响应相关***/
-    /*@RequestMapping(value = "/upload",method = RequestMethod.POST)*/
+    /*@RequestMapping(value = "/upload",method = RequestMethod.POST)
+    * @RequestParam("file")如果参数和前端的一样也可以省略
+    * */
     @PostMapping("/upload")
     @ResponseBody
-    public String testSingleFileUplaod(MultipartFile file){
+    public String testSingleFileUplaod(@RequestParam("file") MultipartFile file){
         if(file.isEmpty()){
             return "File is Empty!";
         }

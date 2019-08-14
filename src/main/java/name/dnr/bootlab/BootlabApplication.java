@@ -39,7 +39,10 @@ public class BootlabApplication {
         return tomcat;
     }
 
-    /*@RequestParam
+
+/**
+ * @ ResultMap的服用和返回类型的问题，将先定义@Results的设置id，然后在别的地方复用。
+ *@RequestParam
 用来处理Content-Type: 为 application/x-www-form-urlencoded编码的内容
 
 consumes="application/json"说明这个接口只处理Content-Type="application/json"的请求
@@ -52,12 +55,17 @@ MyBatis接口注解
 
 微信小程序的生命周期 静默登录 公私token
 
-@ResultMap的服用和返回类型的问题，将先定义@Results的设置id，然后在别的地方复用。
+
 
 EsLint代码风格审查
 大数据需要使用 redis
 数据库模糊查询搜搜过慢优化，使用索引
 需求分析没有做好面向用户 市场调研 市场需求--运营 如何吸引算法用户过来
 数据库关联查询的效率问题
-@RequestParam("FF") @RequestBody*/
+@RequestParam("FF") @RequestBody*
+
+后端并发处理 乐观锁
+
+******     */
+
 }

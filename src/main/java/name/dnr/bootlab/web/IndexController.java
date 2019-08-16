@@ -25,4 +25,9 @@ public class IndexController {
         return "sblearn/tests";
     }
 
+    @RequestMapping("/newsapp")
+    public String newsApp() {
+        return "newsapp/index";
+    }
+
 }

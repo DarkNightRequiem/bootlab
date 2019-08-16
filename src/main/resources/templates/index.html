@@ -11,6 +11,10 @@
         function sblearnOnClick(){
             window.location.href='/sblearn'
         }
+
+        function newsAppONClick(){
+            window.location.href='/newsapp'
+        }
     </script>
 </head>
 <style>
@@ -35,7 +39,7 @@
         <div class="btn-toolbar"  style="margin-top: 10%; padding:0; width: 100%;">
             <div class="btn-group">
                 <button type="button" class="btn btn-danger">按钮 1</button>
-                <button type="button" class="btn btn-warning">简单新闻推荐程序</button>
+                <button type="button" class="btn btn-warning" onclick="newsAppONClick()">简单新闻推荐程序</button>
                 <button id="sblearn" type="button" class="btn btn-success" onclick=sblearnOnClick()>Spring Boot 案例学习</button>
             </div>
             <div class="btn-group">
